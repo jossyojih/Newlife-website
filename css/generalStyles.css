@@ -96,7 +96,7 @@ p {
 }
 
 header {
-  height: 6rem;
+  height: 6.5rem;
   background-color: #ffffff;
   position: relative;
   z-index: 999;
@@ -195,15 +195,19 @@ header {
   gap: 1.5rem;
 }
 
+.site-logo.foooter img {
+  width: 100px;
+}
+
 .site-logo {
-  width: 80px;
-  padding: 1rem 0;
+  width: 60px;
+  padding: 0.4rem 0;
 }
 .header-nav ul {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .login {
