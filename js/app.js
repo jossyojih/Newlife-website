@@ -19,6 +19,25 @@ closeModal.addEventListener('click', () => {
   loginModal.classList.toggle('hide-modal')
 })
 
+//Latest news tab
+
+document.addEventListener('DOMContentLoaded', function () {
+  let buttons = document.querySelectorAll('.tab-btn')
+  console.log(buttons)
+
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      console.log('Its working')
+      // Remove 'active' class from all buttons
+      buttons.forEach(function (btn) {
+        btn.classList.remove('active')
+      })
+      // Add 'active' class to the clicked button
+      button.classList.add('active')
+    })
+  })
+})
+
 const dropdownIcons = document.querySelectorAll('.drop-down')
 const dropdownContents = document.querySelectorAll('.dropdown-content')
 
