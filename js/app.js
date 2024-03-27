@@ -11,13 +11,13 @@ const login = document.getElementById('login')
 const loginModal = document.getElementById('login-modal')
 const closeModal = document.getElementById('cross')
 
-login.addEventListener('click', () => {
-  loginModal.classList.toggle('hide-modal')
-})
+// login.addEventListener('click', () => {
+//   loginModal.classList.toggle('hide-modal')
+// })
 
-closeModal.addEventListener('click', () => {
-  loginModal.classList.toggle('hide-modal')
-})
+// closeModal.addEventListener('click', () => {
+//   loginModal.classList.toggle('hide-modal')
+// })
 
 //Latest news tab
 

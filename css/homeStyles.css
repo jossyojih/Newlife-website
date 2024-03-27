@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  height: 70vh;
+  height: 100vh;
 }
 
 .our-team .buttom div h3 {
@@ -31,6 +31,11 @@
   margin: 2rem auto;
 }
 
+.hero figure img {
+  display: block;
+  width: 100%;
+}
+
 #flex-div {
   display: flex;
   align-items: center;
@@ -39,7 +44,7 @@
   margin: 1.5rem auto;
 }
 .hero figure {
-  width: 845px;
+  width: 945px;
 }
 
 #text-left {
@@ -180,7 +185,7 @@
 }
 
 .siora figure {
-  width: 70rem;
+  width: 140rem;
 }
 
 /* End of Siora */
