@@ -89,7 +89,7 @@
 }
 
 .about-us-content {
-  width: 70%;
+  width: 250%;
 }
 
 .about-us-AI .see-more {
@@ -507,7 +507,7 @@ p {
   .partners-bg {
     background-color: var(--color-light);
     padding: 3rem 0;
-    margin-top: 20rem;
+    margin-top: 6rem;
   }
 
   .partners-bg.partner-page {
