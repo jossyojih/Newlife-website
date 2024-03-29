@@ -1,19 +1,8 @@
-if (typeof Storage !== 'undefined') {
-  // Retrieve data from local storage
-  var data = localStorage.getItem('key')
-
-  // Check if the data exists
-  if (data !== null) {
-    // Data exists, do something with it
-    console.log('Data found in local storage:', data)
-  } else {
-    // Data doesn't exist
-    console.log('No data found in local storage')
+window.addEventListener('storage', function (event) {
+  if (event.key === 'persist:root') {
+    console.log('Data in local storage changed in another tab:', event.newValue)
   }
-} else {
-  // localStorage is not supported
-  console.log('Sorry, your browser does not support local storage.')
-}
+})
 
 // Menu toggle
 const toggleButton = document.querySelector('.hamburger-icon')
