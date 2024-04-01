@@ -1,7 +1,50 @@
-window.addEventListener('storage', function (event) {
-  if (event.key === 'persist:root') {
-    console.log('Data in local storage changed in another tab:', event.newValue)
+// Getting the search parameters from the current URL
+document.addEventListener('DOMContentLoaded', function () {
+  // Checking if param1 exists in localStorage
+  const storedParam1 = localStorage.getItem('param1')
+
+  // Getting the search parameters from the current URL
+  const searchParams = new URLSearchParams(window.location.search)
+
+  // Getting the value of param1
+  const param1Value = searchParams.get('param1')
+
+  // Selecting the menu items
+  const loginLink = document.querySelector('a.login')
+  const getStartedLink = document.querySelector('a.get-started')
+  const dashboard = document.getElementById('dashboard')
+  const phoneLogin = document.getElementById('dashboard-go')
+  const menuHeader = document.getElementById('menu-header-nav')
+
+  // Hide the dashboard link by default
+  dashboard.style.display = 'none'
+
+  // If param1 exists in localStorage or URL params, show the dashboard link
+  if (storedParam1 || param1Value) {
+    dashboard.style.display = 'block'
+    phoneLogin.style.display = 'block'
+  } else {
+    // If neither param1 exists in localStorage nor in URL params, show login and get started links
+    loginLink.style.display = 'block'
+    getStartedLink.style.display = 'block'
   }
+
+  // If param1 exists in localStorage, remove login and get started links
+  if (storedParam1) {
+    loginLink.parentNode.style.display = 'none'
+    getStartedLink.parentNode.style.display = 'none'
+    menuHeader.style.display = 'none'
+  }
+
+  // If param1 exists in URL params, store it in localStorage and then remove login and get started links
+  if (param1Value) {
+    localStorage.setItem('param1', param1Value)
+    loginLink.parentNode.style.display = 'none'
+    getStartedLink.parentNode.style.display = 'none'
+    menuHeader.style.display = 'none'
+  }
+  const newUrl = window.location.href.split('?')[0]
+  window.history.replaceState({}, document.title, newUrl)
 })
 
 // Menu toggle
@@ -16,14 +59,6 @@ toggleButton.addEventListener('click', () => {
 const login = document.getElementById('login')
 const loginModal = document.getElementById('login-modal')
 const closeModal = document.getElementById('cross')
-
-// login.addEventListener('click', () => {
-//   loginModal.classList.toggle('hide-modal')
-// })
-
-// closeModal.addEventListener('click', () => {
-//   loginModal.classList.toggle('hide-modal')
-// })
 
 //Latest news tab
 

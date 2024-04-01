@@ -507,7 +507,7 @@ p {
   .partners-bg {
     background-color: var(--color-light);
     padding: 3rem 0;
-    margin-top: 6rem;
+    margin-top: 12rem;
   }
 
   .partners-bg.partner-page {

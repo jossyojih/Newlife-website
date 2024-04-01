@@ -198,6 +198,11 @@ header {
   align-items: center;
 }
 
+#dashboard-go li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .hamburger-icon {
   display: none;
 }
