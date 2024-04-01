@@ -162,6 +162,10 @@ header {
   display: blo;
 }
 
+#resize-2 {
+  height: 230px;
+  object-fit: cover;
+}
 .about-dropdown {
   background-color: #fff;
   position: absolute;
@@ -264,7 +268,7 @@ header {
   display: block;
   transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-400px);
 }
 
 .our-team .bottom.left {
@@ -276,6 +280,11 @@ header {
 }
 .our-team .bottom.left p {
   width: 50%;
+}
+
+#resize-3 {
+  height: 260px;
+  object-fit: cover;
 }
 
 .dropdown-content li {
@@ -376,6 +385,17 @@ header {
 }
 
 @media (max-width: 500px) {
+  #resize-3 {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  #resize-2 {
+    height: 100%;
+    width: 100%;
+    object-fit: initial;
+  }
   .remove-sm-screen {
     display: none;
   }
@@ -425,7 +445,7 @@ header {
     background-color: #fff;
     top: 4rem;
     left: 12.5rem;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -120%);
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
     z-index: 2;
@@ -478,30 +498,30 @@ header {
   width: 200px;
 }
 
-#resize-2 {
-  height: 230px;
-  object-fit: cover;
-}
-#resize-3 {
-  height: 260px;
-  object-fit: cover;
-}
 #resize-4 {
-  height: 320px;
-  object-fit: cover;
+  height: 130%;
+  width: 100%;
+  object-fit: fill;
 }
 #resize-5 {
-  height: 190px;
+  height: 110%;
+  width: 100%;
+  object-fit: fill;
+}
+#resize-8 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 #resize-6 {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 130%;
+  object-fit: fill;
 }
 
 #resize {
-  height: 400px;
+  height: 470px;
   object-fit: cover;
 }
 
