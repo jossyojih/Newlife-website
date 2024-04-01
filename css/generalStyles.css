@@ -269,11 +269,16 @@ header {
     #fff
   );
 }
+
+.dropdown-content li.project {
+  font-size: 14px;
+  margin-left: 1rem;
+}
 .dropdown-content {
   display: block;
   transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
-  transform: translateY(-400px);
+  transform: translateY(-520px);
 }
 
 .our-team .bottom.left {
@@ -295,6 +300,11 @@ header {
 .dropdown-content li {
   margin: 0.5rem 0;
 }
+
+.dropdown-content li a {
+  font-weight: 500;
+}
+
 .show-link-dropdown {
   opacity: 1;
   transform: translateY(0);
