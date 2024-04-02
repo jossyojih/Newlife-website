@@ -22,9 +22,20 @@
   gap: 1.5rem;
 }
 
+.container-height {
+  height: 200px;
+}
+
+.img-height {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .card {
   border: 2px solid var(--color-light);
   margin: 1rem;
+  height: auto;
+  width: 350px;
 }
 
 .card div {

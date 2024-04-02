@@ -27,8 +27,15 @@
 
 #partner-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin: 2rem auto;
+  gap: 2rem;
+}
+#partner-grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 2rem auto;
+  gap: 2rem;
 }
 
 .hero figure img {
@@ -48,7 +55,7 @@
 }
 
 #text-left {
-  text-align: left;
+  text-align: center;
 }
 
 .our-team .buttom div #text-left {
@@ -504,6 +511,9 @@ p {
     flex-direction: column;
   }
 
+  #partner-grid-4 {
+    grid-template-columns: 1fr;
+  }
   .partners-bg {
     background-color: var(--color-light);
     padding: 3rem 0;
