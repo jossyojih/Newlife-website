@@ -252,6 +252,7 @@
   background: var(--color-primary);
   padding: 0.6rem 1rem;
   color: #fff;
+  cursor: pointer;
 }
 
 #top {
