@@ -22,6 +22,10 @@ html {
   border: 0;
 }
 
+* p {
+  text-align: justify !important;
+}
+
 /* Reset margins and paddings for most elements */
 
 /* Remove list styles on ul and ol elements */
@@ -279,6 +283,17 @@ header {
   transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
   transform: translateY(-520px);
+}
+
+.center-resource {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.center-resource div li {
+  margin: 0.3rem 0;
 }
 
 .our-team .bottom.left {
