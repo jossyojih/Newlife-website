@@ -22,6 +22,20 @@ buttons.forEach((button) => {
   })
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+  const paragraphs = document.querySelectorAll('.toggle-paragraph')
+  paragraphs.forEach((paragraph) => {
+    const words = paragraph.textContent
+      .split(' ')
+      .filter((word) => word.trim() !== '')
+    const wordCount = words.length
+    if (wordCount > 20) {
+      const truncatedText = words.slice(0, 20).join(' ') + '...'
+      paragraph.textContent = truncatedText
+    }
+  })
+})
+
 // Getting the search parameters from the current URL
 document.addEventListener('DOMContentLoaded', function () {
   // Checking if param1 exists in localStorage
