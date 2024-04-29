@@ -1,3 +1,27 @@
+const buttons = document.querySelectorAll('.tab-btn')
+const newsItems = document.querySelectorAll('.news-item')
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter')
+
+    // Show all news items initially
+    newsItems.forEach((item) => {
+      item.style.display = 'block'
+    })
+
+    // Hide news items that don't match the filter
+    if (filter !== 'all') {
+      newsItems.forEach((item) => {
+        const category = item.getAttribute('data-category')
+        if (category !== filter) {
+          item.style.display = 'none'
+        }
+      })
+    }
+  })
+})
+
 // Getting the search parameters from the current URL
 document.addEventListener('DOMContentLoaded', function () {
   // Checking if param1 exists in localStorage
