@@ -22,6 +22,21 @@ buttons.forEach((button) => {
   })
 })
 
+document.getElementById('seeMoreBtn').addEventListener('click', function () {
+  var shortText = document.getElementById('shortText')
+  var fullText = document.getElementById('fullText')
+
+  if (shortText.style.display === 'none') {
+    shortText.style.display = 'block'
+    fullText.style.display = 'none'
+    document.getElementById('seeMoreBtn').innerText = 'See More'
+  } else {
+    shortText.style.display = 'none'
+    fullText.style.display = 'block'
+    document.getElementById('seeMoreBtn').innerText = 'See Less'
+  }
+})
+
 document.addEventListener('DOMContentLoaded', function () {
   const paragraphs = document.querySelectorAll('.toggle-paragraph')
   paragraphs.forEach((paragraph) => {

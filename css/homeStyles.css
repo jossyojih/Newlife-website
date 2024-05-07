@@ -276,11 +276,17 @@
   margin: 4rem auto;
 }
 
+
+
 .news-item {
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.news-item.testimonial {
+  height: auto;
 }
 
 .latest-news h2 {
