@@ -1,6 +1,23 @@
 const buttons = document.querySelectorAll('.tab-btn')
 const newsItems = document.querySelectorAll('.news-item')
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Add 'loader' class to body
+  document.body.classList.add('loader')
+})
+
+window.addEventListener('load', function () {
+  // When the page is fully loaded, remove 'loader' class from body
+  document.body.classList.remove('loader')
+  // Remove the wrapper div
+  var loaderWrapper = document.getElementById('loader-wrapper')
+  if (loaderWrapper) {
+    loaderWrapper.parentNode.removeChild(loaderWrapper)
+  }
+  // Hide the loading spinner
+  document.getElementById('loading-spinner').classList.add('hide-spinner')
+})
+
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     const filter = button.getAttribute('data-filter')
@@ -195,21 +212,4 @@ document.getElementById('seeMore').addEventListener('click', function () {
     hiddenContent.style.display = 'none'
     document.getElementById('seeMore').textContent = 'See more'
   }
-})
-
-document.addEventListener('DOMContentLoaded', function () {
-  // Add 'loader' class to body
-  document.body.classList.add('loader')
-})
-
-window.addEventListener('load', function () {
-  // When the page is fully loaded, remove 'loader' class from body
-  document.body.classList.remove('loader')
-  // Remove the wrapper div
-  var loaderWrapper = document.getElementById('loader-wrapper')
-  if (loaderWrapper) {
-    loaderWrapper.parentNode.removeChild(loaderWrapper)
-  }
-  // Hide the loading spinner
-  document.getElementById('loading-spinner').classList.add('hide-spinner')
 })
