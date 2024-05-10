@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
     loaderWrapper.parentNode.removeChild(loaderWrapper)
   }
   // Hide the loading spinner
-  document.getElementById('loading-spinner').classList.add('hide-spinner')
+  // document.getElementById('loading-spinner').classList.add('hide-spinner')
 })
 
 buttons.forEach((button) => {
@@ -39,19 +39,21 @@ buttons.forEach((button) => {
   })
 })
 
-document.getElementById('seeMoreBtn').addEventListener('click', function () {
-  var shortText = document.getElementById('shortText')
-  var fullText = document.getElementById('fullText')
+window.addEventListener('load', function () {
+  document.getElementById('seeMoreBtn').addEventListener('click', function () {
+    var shortText = document.getElementById('shortText')
+    var fullText = document.getElementById('fullText')
 
-  if (shortText.style.display === 'none') {
-    shortText.style.display = 'block'
-    fullText.style.display = 'none'
-    document.getElementById('seeMoreBtn').innerText = 'See More'
-  } else {
-    shortText.style.display = 'none'
-    fullText.style.display = 'block'
-    document.getElementById('seeMoreBtn').innerText = 'See Less'
-  }
+    if (shortText.style.display === 'none') {
+      shortText.style.display = 'block'
+      fullText.style.display = 'none'
+      document.getElementById('seeMoreBtn').innerText = 'See More'
+    } else {
+      shortText.style.display = 'none'
+      fullText.style.display = 'block'
+      document.getElementById('seeMoreBtn').innerText = 'See Less'
+    }
+  })
 })
 
 document.addEventListener('DOMContentLoaded', function () {
