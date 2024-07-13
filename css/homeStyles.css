@@ -10,6 +10,7 @@
 
 .hero {
   margin: 4rem auto;
+  margin-bottom: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,7 +52,7 @@
   margin: 1.5rem auto;
 }
 .hero figure {
-  width: 945px;
+  width: 100%;
 }
 
 #text-left {
@@ -162,6 +163,7 @@
 .partners-bg {
   background-color: var(--color-light);
   padding: 3rem 0;
+  margin-top: 3rem;
 }
 
 .partners-logo {
@@ -275,8 +277,6 @@
 .latest-news {
   margin: 4rem auto;
 }
-
-
 
 .news-item {
   height: 500px;
@@ -534,7 +534,7 @@ p {
   .partners-bg {
     background-color: var(--color-light);
     padding: 3rem 0;
-    margin-top: 15rem;
+    margin-top: -7rem;
   }
 
   .partners-bg.partner-page {
@@ -550,6 +550,11 @@ p {
   .header-nav-links {
     display: none;
   }
+
+  .hero figure {
+    width: auto !important;
+  }
+
 
   .our-team div {
     display: flex;
@@ -573,6 +578,7 @@ p {
   }
   .hero {
     flex-direction: column;
+    justify-content: center;
     margin: 2rem auto;
   }
 
